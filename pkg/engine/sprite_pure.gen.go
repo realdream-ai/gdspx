@@ -324,6 +324,9 @@ func (pself *Sprite) SetGravity(gravity float64) {
 func (pself *Sprite) SetMass(mass float64) {
 }
 
+func (pself *Sprite) SetMosaic(strength float64) {
+}
+
 func (pself *Sprite) SetPhysicProcess(is_on bool) {
 }
 
@@ -379,6 +382,9 @@ func (pself *Sprite) SetVelocity(velocity Vec2) {
 }
 
 func (pself *Sprite) SetVisible(visible bool) {
+}
+
+func (pself *Sprite) SetVortex(strength float64) {
 }
 
 func (pself *Sprite) SetZIndex(z int64) {

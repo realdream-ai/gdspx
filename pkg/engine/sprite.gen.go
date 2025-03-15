@@ -304,6 +304,10 @@ func (pself *Sprite) SetMass(mass float64) {
 	SpriteMgr.SetMass(pself.Id, mass)
 }
 
+func (pself *Sprite) SetMosaic(strength float64) {
+	SpriteMgr.SetMosaic(pself.Id, strength)
+}
+
 func (pself *Sprite) SetPhysicProcess(is_on bool) {
 	SpriteMgr.SetPhysicProcess(pself.Id, is_on)
 }
@@ -378,6 +382,10 @@ func (pself *Sprite) SetVelocity(velocity Vec2) {
 
 func (pself *Sprite) SetVisible(visible bool) {
 	SpriteMgr.SetVisible(pself.Id, visible)
+}
+
+func (pself *Sprite) SetVortex(strength float64) {
+	SpriteMgr.SetVortex(pself.Id, strength)
 }
 
 func (pself *Sprite) SetZIndex(z int64) {
