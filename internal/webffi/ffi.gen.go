@@ -104,6 +104,8 @@ type GDExtensionInterface struct {
 	SpxSpriteGetRenderScale             js.Value
 	SpxSpriteSetColor                   js.Value
 	SpxSpriteGetColor                   js.Value
+	SpxSpriteSetMosaic                  js.Value
+	SpxSpriteSetVortex                  js.Value
 	SpxSpriteSetTextureAltas            js.Value
 	SpxSpriteSetTexture                 js.Value
 	SpxSpriteSetTextureAltasDirect      js.Value
@@ -298,6 +300,8 @@ func (x *GDExtensionInterface) loadProcAddresses() {
 	x.SpxSpriteGetRenderScale = dlsymGD("gdspx_sprite_get_render_scale")
 	x.SpxSpriteSetColor = dlsymGD("gdspx_sprite_set_color")
 	x.SpxSpriteGetColor = dlsymGD("gdspx_sprite_get_color")
+	x.SpxSpriteSetMosaic = dlsymGD("gdspx_sprite_set_mosaic")
+	x.SpxSpriteSetVortex = dlsymGD("gdspx_sprite_set_vortex")
 	x.SpxSpriteSetTextureAltas = dlsymGD("gdspx_sprite_set_texture_altas")
 	x.SpxSpriteSetTexture = dlsymGD("gdspx_sprite_set_texture")
 	x.SpxSpriteSetTextureAltasDirect = dlsymGD("gdspx_sprite_set_texture_altas_direct")

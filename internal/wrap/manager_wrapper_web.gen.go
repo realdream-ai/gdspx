@@ -487,6 +487,16 @@ func (pself *spriteMgr) GetColor(obj Object) Color {
 	_retValue := API.SpxSpriteGetColor.Invoke(arg0)
 	return JsToGdColor(_retValue)
 }
+func (pself *spriteMgr) SetMosaic(obj Object, strength float64) {
+	arg0 := JsFromGdObj(obj)
+	arg1 := JsFromGdFloat(strength)
+	API.SpxSpriteSetMosaic.Invoke(arg0, arg1)
+}
+func (pself *spriteMgr) SetVortex(obj Object, strength float64) {
+	arg0 := JsFromGdObj(obj)
+	arg1 := JsFromGdFloat(strength)
+	API.SpxSpriteSetVortex.Invoke(arg0, arg1)
+}
 func (pself *spriteMgr) SetTextureAltas(obj Object, path string, rect2 Rect2) {
 	arg0 := JsFromGdObj(obj)
 	arg1 := JsFromGdString(path)

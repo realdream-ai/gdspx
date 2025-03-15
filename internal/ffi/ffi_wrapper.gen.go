@@ -154,6 +154,8 @@ type GDExtensionSpxSpriteSetRenderScale C.GDExtensionSpxSpriteSetRenderScale
 type GDExtensionSpxSpriteGetRenderScale C.GDExtensionSpxSpriteGetRenderScale
 type GDExtensionSpxSpriteSetColor C.GDExtensionSpxSpriteSetColor
 type GDExtensionSpxSpriteGetColor C.GDExtensionSpxSpriteGetColor
+type GDExtensionSpxSpriteSetMosaic C.GDExtensionSpxSpriteSetMosaic
+type GDExtensionSpxSpriteSetVortex C.GDExtensionSpxSpriteSetVortex
 type GDExtensionSpxSpriteSetTextureAltas C.GDExtensionSpxSpriteSetTextureAltas
 type GDExtensionSpxSpriteSetTexture C.GDExtensionSpxSpriteSetTexture
 type GDExtensionSpxSpriteSetTextureAltasDirect C.GDExtensionSpxSpriteSetTextureAltasDirect
@@ -1031,6 +1033,28 @@ func CallSpriteGetColor(
 	C.cgo_callfn_GDExtensionSpxSpriteGetColor(arg0, arg1GdObj, &ret_val)
 
 	return (GdColor)(ret_val)
+}
+func CallSpriteSetMosaic(
+	obj GdObj,
+	strength GdFloat,
+) {
+	arg0 := (C.GDExtensionSpxSpriteSetMosaic)(api.SpxSpriteSetMosaic)
+	arg1GdObj = (C.GdObj)(obj)
+	arg2GdFloat = (C.GdFloat)(strength)
+
+	C.cgo_callfn_GDExtensionSpxSpriteSetMosaic(arg0, arg1GdObj, arg2GdFloat)
+
+}
+func CallSpriteSetVortex(
+	obj GdObj,
+	strength GdFloat,
+) {
+	arg0 := (C.GDExtensionSpxSpriteSetVortex)(api.SpxSpriteSetVortex)
+	arg1GdObj = (C.GdObj)(obj)
+	arg2GdFloat = (C.GdFloat)(strength)
+
+	C.cgo_callfn_GDExtensionSpxSpriteSetVortex(arg0, arg1GdObj, arg2GdFloat)
+
 }
 func CallSpriteSetTextureAltas(
 	obj GdObj,
